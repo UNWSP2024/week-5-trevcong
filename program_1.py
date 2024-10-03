@@ -6,12 +6,8 @@
 
 
 def kilometer_conversion(kilometers):    
-    miles = 0.0
-    ######################
-    # WRITE YOUR CODE HERE
-    ######################    
-
-
+    miles = kilometers * .6214
+    
     # Return the variable to the calling function
     return miles
 
@@ -19,8 +15,10 @@ def kilometer_conversion(kilometers):
 #### you only need to worry about the actual temp 
 #### conversion logic in the temp_conversion function
 if __name__ == '__main__':
-    # Get User Input
-    print('in main')
+    userInp = int(input("Enter the number of kilometers: "))
+    g = kilometer_conversion(userInp)
+
+    print("Miles ", g)
     # Call kilometer_conversion
     
     # Display the miles
