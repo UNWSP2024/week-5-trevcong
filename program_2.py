@@ -1,13 +1,28 @@
-# Program #2: Math Quiz
-# Write a program that gives simple math quizzes.  The program should display two random numbers to be added, such as
+import random
 
-#     247
+def main():
+    func()
 
-# + 129
 
-# ------
+def func():
+    rand1 = random.randint(1, 500)
+    rand2 = random.randint(1, 500)
+    randAnswer = rand1 + rand2
+    bool = True 
+    while(bool):
+        try:
+            print("  ", rand1)
+            print("+ ", rand2)
+            print("=  ?")
+            userInput = input("What is the sum of these two numbers: ")
+            if int(userInput) == randAnswer:
+                print("Congrats! You gave the answer ", randAnswer)
+                break
+            else:
+                print("No")
+        except:
+            print("Nope")
+    print("")
 
-# The program should allow the student to enter the answer.  
-# If the answer is correct, a message of congratulations should be displayed.  
-# If the answer is incorrect a message showing the correct answer should be displayed.  
-# The program must use a function that accomplishes part of the needed tasks.
+if __name__ == "__main__":
+    main()
